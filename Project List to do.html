@@ -1,25 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content=" to do the JavaScript Final Project List to do"/>
-    <title>JavaScript Final Project List to do
-</title>
-</head>
-<body style="background-color: indigo; color: aliceblue; font-size: 30px; ">
-    <div style="text-align: center; height: 20vh;">
-        <h2>List to do</h2>
-        <input id="textInput" type="text">
-        <button id="submitButt">submit</button>
-        <ul id="listContainer" style="list-style-type: none;"></ul>
-        <button id="filterAll">All</button>
-        <button id="filterComplete">Complete</button>
-        <button id="filterIncomplete">Incomplete</button>
-        
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content=" to do the JavaScript Final Project List to do"
+    />
+    <title>JavaScript Final Project List to do</title>
+  </head>
+  <style>
+    body {
+      background-color: indigo;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      padding-top: 50px;
+      color: purple;
+    }
+
+    .todo-box {
+      background-color: #eee;
+      padding: 30px;
+      border-radius: 15px;
+      width: 400px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .todo-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .todo-box input[type="text"] {
+      width: 70%;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      margin-right: 5px;
+    }
+
+    .todo-box button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    #submitButt {
+      background-color: #28a745;
+      color: white;
+    }
+
+    #submitButt:hover {
+      background-color: #218838;
+    }
+
+    #listContainer {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    #listContainer li {
+      background-color: #6a0dad;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.3s;
+    }
+
+    #listContainer li button {
+      background-color: red;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    #listContainer li button:hover {
+      background-color: darkred;
+    }
+
+    #listContainer li input[type="checkbox"] {
+      margin-left: 10px;
+      width: 18px;
+      height: 18px;
+    }
+
+    .filters {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .filters button {
+      margin: 5px;
+      padding: 5px 10px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    #filterAll {
+      background-color: #6c757d;
+      color: white;
+    }
+    #filterComplete {
+      background-color: #28a745;
+      color: white;
+    }
+    #filterIncomplete {
+      background-color: #ffc107;
+      color: white;
+    }
+
+    #filterAll:hover {
+      background-color: #5a6268;
+    }
+    #filterComplete:hover {
+      background-color: #218838;
+    }
+    #filterIncomplete:hover {
+      background-color: #e0a800;
+    }
+  </style>
+  <body>
+    <div class="todo-box">
+      <h2>List to do</h2>
+      <input id="textInput" type="text" />
+      <button id="submitButt">submit</button>
+      <ul id="listContainer" style="list-style-type: none"></ul>
+      <button id="filterAll">All</button>
+      <button id="filterComplete">Complete</button>
+      <button id="filterIncomplete">Incomplete</button>
     </div>
-      
-    
-</body>
-<script src="./Project List to do.js"></script>
+  </body>
+  <script src="./Project List to do.js"></script>
 </html>
